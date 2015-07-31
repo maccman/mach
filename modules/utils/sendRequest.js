@@ -24,6 +24,8 @@ function sendRequest(conn, location) {
     });
 
     nodeRequest.on('error', reject);
+    
+    nodeRequest.end();
 
     onAbort(function () {
       nodeRequest.abort();
